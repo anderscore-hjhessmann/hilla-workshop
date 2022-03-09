@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Grundgerüst für HTML-Beispiele</h1>
+
+    <h2>Simple Template</h2>
+    <div>1 + 1 = <span id="result1">3</span></div>
+    <script>
+        const result1 = `${ 1 + 1 }`;
+        document.getElementById('result1').textContent = result1;
+    </script>
+
+    <h2>Tagged Template</h2>
+    siehe auch <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">MDN: Template literals (Template strings)</a>
+</body>
+</html>
