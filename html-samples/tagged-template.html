@@ -16,5 +16,29 @@
 
     <h2>Tagged Template</h2>
     siehe auch <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">MDN: Template literals (Template strings)</a>
+
+    <div id="result2"></div>
+    <script>
+        function html(strings, ...args) {
+            let result = "Strings:<ul>";
+            for (let s of strings) {
+                result += "<li>" + s + "</li>";
+            }
+            result += "</ul>Args:<ul>"
+            for (let s of args) {
+                result += "<li>" + s + "</li>";
+            }
+            result += "</ul>"
+            return result;
+        }
+
+        document.getElementById('result2').innerHTML = html`
+        div
+            <!-- TODO: Add expression to input. -->
+            input type="text" ${5 +6} value="Hello there."
+        div
+        labelinput type="checkbox" ${1 +1}>Enable editinglabel
+        `;
+    </script>
 </body>
 </html>
